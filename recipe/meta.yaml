@@ -1,4 +1,4 @@
-{% set version = '1.2.0' %}
+{% set version = "1.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SemNetCleaner_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SemNetCleaner/SemNetCleaner_{{ version }}.tar.gz
-  sha256: b120c5856f81687907430202a9fa453b9499871ff8f2ac65077ccd3eb6e139fe
+  sha256: 266142004f14435fedf97f999bb141d519a3f36711222ffa3c6976311c55d5fc
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -24,22 +24,24 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
   host:
-    - r-base >=3.6.0
+    - r-base
     - r-r.matlab
     - r-semnetdictionaries >=0.1.5
+    - r-easycsv
     - r-foreign
-    - r-hunspell
     - r-readxl
+    - r-rstudioapi
     - r-searcher
     - r-stringdist
     - r-stringi
   run:
-    - r-base >=3.6.0
+    - r-base
     - r-r.matlab
     - r-semnetdictionaries >=0.1.5
+    - r-easycsv
     - r-foreign
-    - r-hunspell
     - r-readxl
+    - r-rstudioapi
     - r-searcher
     - r-stringdist
     - r-stringi
@@ -52,12 +54,11 @@ test:
 about:
   home: https://github.com/AlexChristensen/SemNetCleaner
   license: GPL-3.0-or-later
-  summary: Implements several functions that automates the cleaning and spell-checking of text
-    data. Also converges, finalizes, removes plurals and continuous strings, and puts
-    text data in binary format for semantic network analysis. Uses the 'SemNetDictionaries'
-    package to make the cleaning process more accurate, efficient, and reproducible.
+  summary: Implements several functions that automates the cleaning and spell-checking of text data. Also converges, finalizes, removes plurals and continuous strings, and puts text data in binary format for semantic network analysis. Uses the 'SemNetDictionaries' package to make the cleaning process more accurate, efficient,
+    and reproducible.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
