@@ -1,11 +1,11 @@
-About r-semnetcleaner
-=====================
+About r-semnetcleaner-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-semnetcleaner-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/AlexChristensen/SemNetCleaner
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-semnetcleaner-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implements several functions that automates the cleaning and spell-checking of text data. Also converges, finalizes, removes plurals and continuous strings, and puts text data in binary format for semantic network analysis. Uses the 'SemNetDictionaries' package to make the cleaning process more accurate, efficient, and reproducible.
 
