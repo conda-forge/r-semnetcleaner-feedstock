@@ -26,10 +26,8 @@ requirements:
     - r-base
     - r-r.matlab
     - r-semnetdictionaries >=0.1.8
-    - r-easycsv
-    - r-editdata
     - r-foreign
-    - r-miniui
+    - r-pbapply
     - r-readxl
     - r-rstudioapi
     - r-searcher
@@ -40,10 +38,8 @@ requirements:
     - r-base
     - r-r.matlab
     - r-semnetdictionaries >=0.1.8
-    - r-easycsv
-    - r-editdata
     - r-foreign
-    - r-miniui
+    - r-pbapply
     - r-readxl
     - r-rstudioapi
     - r-searcher
